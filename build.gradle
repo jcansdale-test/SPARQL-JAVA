@@ -34,7 +34,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/BorderCloud/SPARQL-JAVA")
+            url = uri("https://maven.pkg.github.com/jcansdale-test/SPARQL-JAVA")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
@@ -45,33 +45,5 @@ publishing {
         gpr(MavenPublication) {
             from(components.java)
         }
-//
-//        mavenJava(MavenPublication) {
-//            pom {
-//                name = 'SPARQL-JAVA'
-//                description = 'Lib Java for SPARQL 1.1'
-//                url = 'https://github.com/BorderCloud/SPARQL-JAVA'
-//                //                properties = [
-//                //                        myProp: "value",
-//                //                        "prop.with.dots": "anotherValue"
-//                //                ]
-//                licenses {
-//                    license {
-//                        name = 'Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)'
-//                        url = 'https://creativecommons.org/licenses/by-sa/4.0/'
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id = 'KRafes'
-//                        name = 'Karima Rafes'
-//                        email = 'karima.rafes@gmail.com'
-//                    }
-//                }
-//                scm {
-//                    url = 'https://github.com/BorderCloud/SPARQL-JAVA'
-//                }
-//            }
-//        }
     }
 }
